@@ -1,4 +1,5 @@
 // import { Statistics } from './Statistics';
+// import PropTypes from 'prop-types';
 
 export const StatisticsList = ({ key, label, percentage }) => {
   return (
@@ -30,3 +31,19 @@ export const StatisticsList = ({ key, label, percentage }) => {
     </section>
   );
 };
+
+// StatisticsList.propTypes = {
+//   label: PropTypes.string.isRequired,
+//   percentage: PropTypes.string.isRequired,
+//   key: PropTypes.string.isRequired,
+// };
+
+// StatisticsList.propTypes = {
+//   items: PropTypes.arrayOf(
+//     PropTypes.exact({
+//       id: PropTypes.string.isRequired,
+//       label: PropTypes.string.isRequired,
+//       percentage: PropTypes.number.isRequired,
+//     })
+//   ),
+// };

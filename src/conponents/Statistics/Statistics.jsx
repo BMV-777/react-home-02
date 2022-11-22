@@ -4,11 +4,11 @@ import { StatisticsList } from './StatisticsList';
 
 export const Statistics = ({ stats }) => {
   return (
-    <div>
-      {stats.map(({ id, label, percentage }) => (
-        <StatisticsList key={id} label={label} percentage={percentage} />
-      ))}
-    </div>
+    <ul>
+      <li key={stats.id}>
+        <StatisticsList label={stats.label} percentage={stats.percentage} />
+      </li>
+    </ul>
   );
 };
 
@@ -21,3 +21,12 @@ Statistics.propTypes = {
     })
   ),
 };
+{
+  /* <ul>
+      {stats.map((stat) => (
+        <li key={stat.id}>
+          <StatisticsList label={stat.label} percentage={stat.percentage} />
+        </li>
+      ))}
+    </ul> */
+}
