@@ -1,11 +1,11 @@
-import { FailList } from '../Fail/FailList';
+import { Statistics } from '../Statistics/Statistics';
 import data from '../../fail.json';
 
 function App() {
   return (
     <div>
-      <FailList title="Upload stats" stats={data} />;
-      <FailList stats={data} />;
+      <Statistics title="Upload stats" stats={data} />
+      {/* <Statistics stats={data} /> */}
     </div>
   );
 }

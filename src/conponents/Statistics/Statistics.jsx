@@ -1,18 +1,18 @@
 import PropTypes from 'prop-types';
 
-import { Fail } from './Fail';
+import { StatisticsList } from './StatisticsList';
 
-export const FailList = ({ items }) => {
+export const Statistics = ({ stats }) => {
   return (
     <div>
-      {items.map(({ id, label, percentage }) => (
-        <Fail key={id} label={label} percentage={percentage} />
+      {stats.map(({ id, label, percentage }) => (
+        <StatisticsList key={id} label={label} percentage={percentage} />
       ))}
     </div>
   );
 };
 
-FailList.propTypes = {
+Statistics.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.exact({
       id: PropTypes.string.isRequired,
