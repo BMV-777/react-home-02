@@ -1,9 +1,19 @@
 import PropTypes from 'prop-types';
-import { Container, UlSection, ListItem, List } from './Statistics.module';
 
-export default function Statistics({ item }) {
+import {
+  Container,
+  UlSection,
+  ListItem,
+  List,
+  Card,
+} from './Statistics.module';
+
+const setActive = ({ isActive }) => (isActive ? 'active' : '');
+
+export default function Statistics({ item, title }) {
   return (
     <Container className="Upload stats">
+      {title && <Card className={setActive}>{title}</Card>}
       <UlSection className="">
         {item.map(({ id, label, percentage }) => (
           <ListItem className={item} key={id}>
@@ -21,3 +31,5 @@ Statistics.propTypes = {
   label: PropTypes.string,
   percentage: PropTypes.number,
 };
+
+// {({ isActive }) => (isActive ? 'active' : '')}
