@@ -1,17 +1,18 @@
 import PropTypes from 'prop-types';
+import { Container, UlSection, ListItem, List } from './Statistics.module';
 
 export default function Statistics({ item }) {
   return (
-    <section className="Upload stats">
-      <ul className="">
+    <Container className="Upload stats">
+      <UlSection className="">
         {item.map(({ id, label, percentage }) => (
-          <li className={item} key={id}>
-            <span className={label}>{label}</span>
-            <span className={label}>{percentage}%</span>
-          </li>
+          <ListItem className={item} key={id}>
+            <List className={label}> {label}</List>
+            <List className={label}> {percentage}%</List>
+          </ListItem>
         ))}
-      </ul>
-    </section>
+      </UlSection>
+    </Container>
   );
 }
 
